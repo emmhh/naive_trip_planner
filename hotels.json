@@ -1,0 +1,331 @@
+[
+  {
+    "name": "Comfort Hotel 90",
+    "address": "473 High Street, JFK, USA",
+    "stars": 3,
+    "rating": 2.6,
+    "amenities": [
+      "Bar",
+      "Swimming pool",
+      "Pet-friendly",
+      "Room service",
+      "Restaurant"
+    ],
+    "price_per_night": 131.95
+  },
+  {
+    "name": "Grand Hotel 47",
+    "address": "937 Main Street, JFK, USA",
+    "stars": 5,
+    "rating": 7.2,
+    "amenities": [
+      "Airport shuttle",
+      "Restaurant",
+      "Fitness center",
+      "Spa"
+    ],
+    "price_per_night": 98.13
+  },
+  {
+    "name": "Economy Hotel 19",
+    "address": "252 Low Street, JFK, USA",
+    "stars": 4,
+    "rating": 9.1,
+    "amenities": [
+      "Room service",
+      "Fitness center",
+      "Spa",
+      "Restaurant",
+      "Free Wi-Fi"
+    ],
+    "price_per_night": 162.53
+  },
+  {
+    "name": "Royal Hotel 29",
+    "address": "676 Low Street, JFK, USA",
+    "stars": 2,
+    "rating": 9.9,
+    "amenities": [
+      "Parking",
+      "Room service"
+    ],
+    "price_per_night": 443.26
+  },
+  {
+    "name": "Royal Hotel 82",
+    "address": "380 Low Street, JFK, USA",
+    "stars": 4,
+    "rating": 9.3,
+    "amenities": [
+      "Free Wi-Fi",
+      "Restaurant",
+      "Airport shuttle",
+      "Parking",
+      "Spa"
+    ],
+    "price_per_night": 238.92
+  },
+  {
+    "name": "Comfort Hotel 25",
+    "address": "869 High Street, LAX, USA",
+    "stars": 1,
+    "rating": 8.0,
+    "amenities": [
+      "Swimming pool",
+      "Spa"
+    ],
+    "price_per_night": 396.17
+  },
+  {
+    "name": "Royal Hotel 11",
+    "address": "652 Market Street, LAX, USA",
+    "stars": 4,
+    "rating": 3.3,
+    "amenities": [
+      "Parking",
+      "Restaurant",
+      "Room service",
+      "Airport shuttle"
+    ],
+    "price_per_night": 79.25
+  },
+  {
+    "name": "Luxury Hotel 78",
+    "address": "317 Main Street, LAX, USA",
+    "stars": 4,
+    "rating": 1.2,
+    "amenities": [
+      "Fitness center",
+      "Free Wi-Fi"
+    ],
+    "price_per_night": 243.67
+  },
+  {
+    "name": "Economy Hotel 31",
+    "address": "333 High Street, LAX, USA",
+    "stars": 2,
+    "rating": 4.4,
+    "amenities": [
+      "Bar",
+      "Pet-friendly"
+    ],
+    "price_per_night": 245.37
+  },
+  {
+    "name": "Luxury Hotel 4",
+    "address": "699 Low Street, LAX, USA",
+    "stars": 5,
+    "rating": 2.3,
+    "amenities": [
+      "Swimming pool",
+      "Fitness center",
+      "Pet-friendly",
+      "Free Wi-Fi",
+      "Airport shuttle"
+    ],
+    "price_per_night": 303.98
+  },
+  {
+    "name": "Grand Hotel 86",
+    "address": "796 Main Street, LHR, UK",
+    "stars": 1,
+    "rating": 1.4,
+    "amenities": [
+      "Spa",
+      "Bar",
+      "Restaurant",
+      "Room service"
+    ],
+    "price_per_night": 345.23
+  },
+  {
+    "name": "Grand Hotel 64",
+    "address": "557 Market Street, LHR, UK",
+    "stars": 1,
+    "rating": 1.2,
+    "amenities": [
+      "Airport shuttle",
+      "Spa",
+      "Room service",
+      "Swimming pool",
+      "Free Wi-Fi"
+    ],
+    "price_per_night": 435.02
+  },
+  {
+    "name": "Luxury Hotel 18",
+    "address": "307 Market Street, LHR, UK",
+    "stars": 3,
+    "rating": 3.8,
+    "amenities": [
+      "Airport shuttle",
+      "Parking"
+    ],
+    "price_per_night": 105.99
+  },
+  {
+    "name": "Grand Hotel 98",
+    "address": "132 Market Street, LHR, UK",
+    "stars": 1,
+    "rating": 8.3,
+    "amenities": [
+      "Restaurant",
+      "Airport shuttle",
+      "Bar",
+      "Fitness center"
+    ],
+    "price_per_night": 419.61
+  },
+  {
+    "name": "Comfort Hotel 64",
+    "address": "535 Market Street, LHR, UK",
+    "stars": 4,
+    "rating": 6.1,
+    "amenities": [
+      "Swimming pool",
+      "Airport shuttle"
+    ],
+    "price_per_night": 352.77
+  },
+  {
+    "name": "Royal Hotel 64",
+    "address": "575 High Street, NRT, Japan",
+    "stars": 5,
+    "rating": 3.8,
+    "amenities": [
+      "Bar",
+      "Room service",
+      "Free Wi-Fi",
+      "Restaurant",
+      "Airport shuttle"
+    ],
+    "price_per_night": 176.84
+  },
+  {
+    "name": "Grand Hotel 2",
+    "address": "854 Low Street, NRT, Japan",
+    "stars": 4,
+    "rating": 4.7,
+    "amenities": [
+      "Room service",
+      "Airport shuttle",
+      "Bar",
+      "Restaurant"
+    ],
+    "price_per_night": 468.64
+  },
+  {
+    "name": "Royal Hotel 30",
+    "address": "189 Main Street, NRT, Japan",
+    "stars": 4,
+    "rating": 9.1,
+    "amenities": [
+      "Spa",
+      "Swimming pool",
+      "Airport shuttle",
+      "Room service",
+      "Restaurant",
+      "Free Wi-Fi"
+    ],
+    "price_per_night": 171.75
+  },
+  {
+    "name": "Luxury Hotel 84",
+    "address": "806 Market Street, NRT, Japan",
+    "stars": 5,
+    "rating": 3.7,
+    "amenities": [
+      "Parking",
+      "Room service",
+      "Pet-friendly",
+      "Spa",
+      "Fitness center",
+      "Airport shuttle"
+    ],
+    "price_per_night": 231.31
+  },
+  {
+    "name": "Economy Hotel 57",
+    "address": "990 Market Street, NRT, Japan",
+    "stars": 1,
+    "rating": 5.7,
+    "amenities": [
+      "Restaurant",
+      "Room service",
+      "Parking",
+      "Swimming pool",
+      "Airport shuttle"
+    ],
+    "price_per_night": 91.09
+  },
+  {
+    "name": "Royal Hotel 26",
+    "address": "387 High Street, SYD, Australia",
+    "stars": 4,
+    "rating": 2.7,
+    "amenities": [
+      "Restaurant",
+      "Airport shuttle",
+      "Free Wi-Fi",
+      "Bar",
+      "Spa",
+      "Pet-friendly"
+    ],
+    "price_per_night": 94.28
+  },
+  {
+    "name": "Royal Hotel 78",
+    "address": "671 High Street, SYD, Australia",
+    "stars": 3,
+    "rating": 4.5,
+    "amenities": [
+      "Free Wi-Fi",
+      "Pet-friendly",
+      "Swimming pool",
+      "Bar"
+    ],
+    "price_per_night": 408.68
+  },
+  {
+    "name": "Luxury Hotel 14",
+    "address": "253 High Street, SYD, Australia",
+    "stars": 3,
+    "rating": 1.3,
+    "amenities": [
+      "Bar",
+      "Free Wi-Fi",
+      "Airport shuttle",
+      "Restaurant"
+    ],
+    "price_per_night": 259.99
+  },
+  {
+    "name": "Comfort Hotel 37",
+    "address": "864 Low Street, SYD, Australia",
+    "stars": 3,
+    "rating": 5.6,
+    "amenities": [
+      "Pet-friendly",
+      "Free Wi-Fi",
+      "Airport shuttle",
+      "Parking",
+      "Restaurant"
+    ],
+    "price_per_night": 232.09
+  },
+  {
+    "name": "Grand Hotel 99",
+    "address": "696 Low Street, SYD, Australia",
+    "stars": 2,
+    "rating": 1.9,
+    "amenities": [
+      "Spa",
+      "Restaurant",
+      "Room service",
+      "Bar",
+      "Free Wi-Fi",
+      "Fitness center"
+    ],
+    "price_per_night": 305.1
+  }
+]

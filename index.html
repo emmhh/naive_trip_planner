@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="number"], button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .trip-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .trip-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .trip-card p {
+            margin: 5px 0;
+        }
+        .trip-card h4 {
+            margin-bottom: 5px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search for Best Trip</h1>
+        <form id="search-form">
+            <label for="origin">Origin:</label>
+            <select id="origin" name="origin" required>
+                <option value="JFK">New York City (JFK)</option>
+                <option value="LAX">Los Angeles (LAX)</option>
+                <option value="LHR">London (LHR)</option>
+                <option value="NRT">Tokyo (NRT)</option>
+                <option value="SYD">Sydney (SYD)</option>
+            </select>
+            <br><br>
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget" required>
+                <option value="500">Less than $500</option>
+                <option value="1000">Less than $1000</option>
+                <option value="1500">Less than $1500</option>
+                <option value="2000">Less than $2000</option>
+                <option value="2500">Less than $2500</option>
+                <option value="3000">Less than $3000</option>
+                <option value="4000">Less than $4000</option>
+            </select>
+            <br><br>
+            <label for="nights">Nights:</label>
+            <input type="number" id="nights" name="nights" min="1" required>
+            <br><br>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const origin = document.getElementById('origin').value;
+            const budget = document.getElementById('budget').value;
+            const nights = document.getElementById('nights').value;
+
+            const baseURL = window.location.origin;
+
+            fetch(`${baseURL}/searchBestTrip?origin=${origin}&budget=${budget}&nights=${nights}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => displayResults(data))
+                .catch(error => console.error('Error:', error));
+        });
+
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Clear previous results
+            // if no results returned
+            if (results.message) {
+                const message = document.createElement('p');
+                message.textContent = results.message;
+                resultsContainer.appendChild(message);
+                return;
+            }
+            
+            results.forEach(trip => {
+                const tripCard = document.createElement('div');
+                tripCard.className = 'trip-card';
+
+                const hotel = trip.hotel;
+                const outboundFlight = trip.outbound_flight;
+                const returnFlight = trip.return_flight;
+
+                tripCard.innerHTML = `
+                    <h3>${hotel.name}</h3>
+                    <p><strong>Address:</strong> ${hotel.address}</p>
+                    <p><strong>Rating:</strong> ${hotel.rating} stars</p>
+                    <p><strong>Amenities:</strong> ${hotel.amenities.join(', ')}</p>
+                    <p><strong>Price per night:</strong> $${hotel.price_per_night}</p>
+                    <p><strong>Total cost:</strong> $${trip.total_cost}</p>
+                    <h4>Outbound Flight</h4>
+                    <p><strong>From:</strong> ${outboundFlight.from}</p>
+                    <p><strong>To:</strong> ${outboundFlight.to}</p>
+                    <p><strong>Departure:</strong> ${outboundFlight.departure_time}</p>
+                    <p><strong>Arrival:</strong> ${outboundFlight.arrival_time}</p>
+                    <p><strong>Price:</strong> $${outboundFlight.price}</p>
+                    <p><strong>Stops:</strong> ${outboundFlight.stops.join(', ')}</p>
+                    <h4>Return Flight</h4>
+                    <p><strong>From:</strong> ${returnFlight.from}</p>
+                    <p><strong>To:</strong> ${returnFlight.to}</p>
+                    <p><strong>Departure:</strong> ${returnFlight.departure_time}</p>
+                    <p><strong>Arrival:</strong> ${returnFlight.arrival_time}</p>
+                    <p><strong>Price:</strong> $${returnFlight.price}</p>
+                    <p><strong>Stops:</strong> ${returnFlight.stops.join(', ')}</p>
+                `;
+
+                resultsContainer.appendChild(tripCard);
+            });
+        }
+    </script>
+</body>
+</html>
