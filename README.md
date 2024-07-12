@@ -58,7 +58,7 @@ If you are on Replit:
 - on the bottom of the console, there's a line looks like "Port :5000 opened ...", click on the settings icon located on the right end of this line, and configure the external ports from there.
 
 ## Assumptions
-- assume calling this API once == calling getHotels + getFlights once each.
+- assume calling `/searchBestTrip` API once == calling getHotels + getFlights once each.
 - assuming all flights are avialable everyday.
 - assuming all hotels are always avialable, and prices are the same each day, so we are booking the same hotels everyday.
 
